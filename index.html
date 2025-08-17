@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="page-header">
+    <h1 id="page-heading">Tic Tac T<span class="text-light">o</span>e</h1>
+    <button class="button reset nav-reset-button" id="nav-reset-button">Reset</button>
+  </div>
+  <main>
+    <div class="game">
+      <div class="players">
+        <div class="players-container">
+          <div class="player player-selected" id="player-one">
+            <img src="./img/o-small.svg" alt="o image" style="stroke-width: 1rem;"/>
+            <span class="score text-light" id="player-one-score"></span>
+          </div>
+          <div class="player" id="player-two">
+            <img src="./img/x-small.svg" alt="x image" />
+            <span class="score text-dark" id="player-two-score"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div class="node" data-number="0"></div>
+        <div class="node" data-number="1"></div>
+        <div class="node" data-number="2"></div>
+
+        <div class="node" data-number="3"></div>
+        <div class="node" data-number="4"></div>
+        <div class="node" data-number="5"></div>
+
+        <div class="node" data-number="6"></div>
+        <div class="node" data-number="7"></div>
+        <div class="node" data-number="8"></div>
+
+        <div class="winner" id="winner-one">
+          <div class="winner-container">
+            <div class="winner-image-container">
+              <img class="winner-image" src="./img/o.svg" alt="o image" />
+            </div>
+            <span class="winner-content text-dark">
+              Winner!
+            </span>
+            <div class="winner-buttons">
+              <button class="button reset">Reset</button>
+              <button class="button text-dark next">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="winner" id="winner-two">
+          <div class="winner-container">
+            <div class="winner-image-container">
+              <img class="winner-image" src="./img/x.svg" alt="o image" />
+            </div>
+            <span class="winner-content text-light">
+              Winner!
+            </span>
+            <div class="winner-buttons">
+              <button class="button reset">Reset</button>
+              <button class="button text-dark next">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="winner" id="draw">
+          <div class="winner-container">
+            <div class="winner-image-container">
+              <img class="winner-image" src="./img/o.svg" alt="o image" />
+              <img class="winner-image" src="./img/x.svg" alt="o image" />
+            </div>
+            <span class="winner-content text-dark">
+              Draw!
+            </span>
+            <div class="winner-buttons">
+              <button class="button reset">Reset</button>
+              <button class="button text-dark next">Next</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
